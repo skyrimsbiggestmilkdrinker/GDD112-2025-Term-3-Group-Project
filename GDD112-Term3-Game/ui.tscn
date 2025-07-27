@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://itj2qlibyghc"]
+
+[ext_resource type="Texture2D" uid="uid://dcubo1rqbfweg" path="res://placeholderTextures/placeholderIcons/icon_heart_broken.png" id="1_fyqef"]
+[ext_resource type="Texture2D" uid="uid://doo17cieq1ug3" path="res://placeholderTextures/placeholderIcons/icon_heart.png" id="2_m6e0p"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="LoveMeter" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 24.0
+offset_right = 40.0
+offset_bottom = 64.0
+
+[node name="Meter" type="ProgressBar" parent="LoveMeter"]
+offset_left = 48.0
+offset_right = 112.0
+offset_bottom = 8.0
+scale = Vector2(4, 4)
+min_value = -100.0
+show_percentage = false
+
+[node name="BrokenHeart" type="TextureRect" parent="LoveMeter"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 40.0
+offset_bottom = 32.0
+texture = ExtResource("1_fyqef")
+
+[node name="NormalHeart" type="TextureRect" parent="LoveMeter"]
+layout_mode = 0
+offset_left = 312.0
+offset_right = 344.0
+offset_bottom = 32.0
+texture = ExtResource("2_m6e0p")
